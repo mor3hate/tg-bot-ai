@@ -22,6 +22,9 @@ const openai = new OpenAIApi(configuration)
 
 botCommand({ bot: bot, openai: openai })
 
+process.once('SIGINT', () => bot.stop('SIGINT'))
+process.once('SIGTERM', () => bot.stop('SIGTERM'))
+
 app.listen(port, () => {
 	console.log(colors.green(`⚡️[server]: Server is running at ${port}`))
 })
