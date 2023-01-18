@@ -1,4 +1,4 @@
-import { Context, Telegraf } from 'telegraf'
+import { Telegraf } from 'telegraf'
 import express, { Express } from 'express'
 import dotenv from 'dotenv'
 import colors from 'colors'
