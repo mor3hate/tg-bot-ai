@@ -10,8 +10,6 @@ interface IBotInit {
 }
 
 export const botCommand = ({ bot, openai }: IBotInit) => {
-	bot.launch()
-
 	bot.start(
 		async (ctx: Context) =>
 			await ctx.replyWithHTML(`<b>Привет!👋</b>

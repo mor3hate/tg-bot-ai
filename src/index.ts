@@ -22,6 +22,14 @@ const openai = new OpenAIApi(configuration)
 
 botCommand({ bot: bot, openai: openai })
 
+bot.launch({
+	webhook: {
+		domain: 'https://tg-bot-ai.onrender.com',
+
+		port: 10000,
+	},
+})
+
 process.once('SIGINT', () => bot.stop('SIGINT'))
 process.once('SIGTERM', () => bot.stop('SIGTERM'))
 
