@@ -26,7 +26,7 @@ bot.launch({
 	webhook: {
 		domain: 'https://tg-bot-ai.onrender.com',
 
-		port: 10000,
+		port: 4200,
 	},
 })
 
